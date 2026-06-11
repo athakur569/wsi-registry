@@ -1,0 +1,23 @@
+[build-system]
+requires = ["setuptools>=68.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "wsi-registry"
+version = "0.1.0"
+description = "Lightweight registry for tracking whole-slide image collections, cohort metadata, and split lineage"
+readme = "README.md"
+license = {text = "MIT"}
+authors = [{name = "Abhishek Thakur", email = "a.thakur5690@gmail.com"}]
+requires-python = ">=3.9"
+keywords = ["digital-pathology", "WSI", "registry", "metadata", "cohort"]
+dependencies = [
+  "numpy>=1.24.0",
+  "pandas>=2.0.0",
+]
+
+[project.scripts]
+wsi-registry = "wsi_registry.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
